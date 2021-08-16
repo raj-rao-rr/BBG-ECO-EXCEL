@@ -10,10 +10,10 @@ We provide a script and accompanying excel file to pull U.S. economic release in
 ## 3	Code Structure
 
 ### 3.1 	`Input`
-* `ECO_RELEASES.xslx` which contains Bloomberg formulas designed to automatically pull economic release information (e.g. US Nonfarm Payrolls). This spreadsheet is updated if and only if a Bloomberg Terminal is active.      
+* **ECO_RELEASES.xslx** which contains Bloomberg formulas designed to automatically pull economic release information (e.g. US Nonfarm Payrolls). This spreadsheet is updated if and only if a Bloomberg Terminal is active.      
 
 ### 3.2 	`Output`
-* `bloomberg_economic_releases.csv` which contains the cleaned series of economic variables organized from oldest to most recent.
+* **bloomberg_economic_releases.csv** which contains the cleaned series of economic variables organized from oldest to most recent.
 
 ## 4	Running Code
 
@@ -33,4 +33,4 @@ Our code file runs exclusive from our single python script `bbg_eco.py`. This sc
 * Expand on the number of countries being examined/retrieved 
 
 ## 6	Contributors
-* [Rajesh Rao](https://github.com/Raj9898) (Sr. Research Analyst)  
+* [Rajesh Rao](https://github.com/raj-rao-rr) (Sr. Research Analyst)  
