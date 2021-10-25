@@ -13,6 +13,7 @@ in an excel file. Note, API users need not worry about this.
 # PACKAGE IMPORTS
 ##########################################################################
 
+import os
 import time
 import numpy as np
 import pandas as pd 
@@ -24,7 +25,7 @@ print('\nParsing Bloomberg Economic Data file...\n')
 start = time.time()
 
 # create excel object to determine number of excel sheets and read sequentially
-xl = pd.ExcelFile('Input/ECO_RELEASES.xlsx')
+xl = pd.ExcelFile(os.getcwd() + '/Input/ECO_RELEASES.xlsx')
 res = xl.sheet_names
 
 # initialize memory for variable storage
@@ -34,7 +35,7 @@ concat_list = []
 for pg in range(len(res)):
     
     # read dataframe from economic release sheet
-    df = pd.read_excel('ECO_RELEASES.xlsx', sheet_name=pg)
+    df = pd.read_excel(os.getcwd() + '/Input/ECO_RELEASES.xlsx', sheet_name=pg)
     
     # construct proper database from each sheet
     export_df = df.iloc[5:]
@@ -82,7 +83,7 @@ concat_pd = concat_pd.drop_duplicates(subset=['RELEASE_DATE', 'TICKER'], keep=Fa
 
 # %% Export Files locally to folder
 
-print('\Cleaned Bloomberg Economic Data completed\n')
-print('\t\tTime Taken: %.2f minutes' % ((time.time() - start) / 60))
-concat_pd.to_csv('Output/bloomberg_economic_releases.csv', index=False)
-
+print('Cleaned Bloomberg Economic Data completed')
+print('\tTime Taken: %.2f minutes' % ((time.time() - start) / 60))
+concat_pd.to_csv(os.getcwd() + '/Output/bloomberg_economic_releases.csv', 
+                 index=False)
