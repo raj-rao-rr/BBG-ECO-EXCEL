@@ -1,7 +1,7 @@
 ### Bloomberg Economic Release Parser
 
 ## 1	Introduction
-We provide a script and accompanying excel file to pull U.S. economic release information from Bloomberg.
+We provide a compact method for pulling historical U.S. economic release information from Bloomberg, updating the required excel spreadsheet and formatting the series as a continuous time series.
 
 ## 2	Software Dependencies
 * Python 3.6 with the following libraries (Pandas, Numpy, Time)
@@ -13,14 +13,16 @@ We provide a script and accompanying excel file to pull U.S. economic release in
 * **ECO_RELEASES.xslx** which contains Bloomberg formulas designed to automatically pull economic release information (e.g. US Nonfarm Payrolls). This spreadsheet is updated if and only if a Bloomberg Terminal is active.      
 
 ### 3.2 	`Output`
-* **bloomberg_economic_releases.csv** which contains the cleaned series of economic variables organized from oldest to most recent.
+* **bloomberg_economic_releases.csv** contains the cleaned series of economic variables organized from oldest to most recent.
 
 ## 4	Running Code
 
 Our code file runs exclusive from our single python script `bbg_eco.py`. This script can be run via IDE or terminal, provided correct Python compiler location is provided from the header.  
 
 1. Open the `ECO_RELEASES.xslx`, go to the Bloomberg tab on Excel and click the Refresh Worksheets icon to update the Bloomberg formulas, populating the data fields. 
-2. Run the `bbg_eco.py` to produce the cleaned series stored under the `Output` folder. Refer to the table below for a sample output. 
+2. After data has been updated, run the `bbg_eco.py` in a Python editor or via command line terminal to produce the cleaned series stored in the `Output` folder under the name `bloomberg_economic_releases.csv`. Note if using the command line be sure to modify the pathing within the script to point to the correct Python compiler.  
+
+Refer to the table below for a sample output.
 
 | RELEASE_DATE   | TICKER         | NAME                                                                        | ACTUAL_RELEASE | ECO_RELEASE_DT | BN_SURVEY_MEDIAN | BN_SURVEY_AVERAGE | BN_SURVEY_HIGH | BN_SURVEY_LOW | FORECAST_STANDARD_DEVIATION | BN_SURVEY_NUMBER_OBSERVATIONS | RELEVANCE_VALUE | SURPRISES | ZSCORE       |
 |----------------|----------------|-----------------------------------------------------------------------------|----------------|----------------|------------------|-------------------|----------------|---------------|-----------------------------|-------------------------------|-----------------|-----------|--------------|
