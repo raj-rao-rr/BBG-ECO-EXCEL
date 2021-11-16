@@ -4,7 +4,7 @@
 We provide a compact method for pulling historical U.S. economic release information from Bloomberg, updating the required excel spreadsheet and formatting the series as a continuous time series.
 
 ## 2	Software Dependencies
-* Python 3.6 with the following libraries (Pandas, Numpy, Time)
+* Python 3.6 system environment with at least 1 GB of memory and the following libraries installed (Pandas, Numpy)
 *	Bloomberg Professional Services for historical data
 
 ## 3	Code Structure
@@ -19,8 +19,9 @@ We provide a compact method for pulling historical U.S. economic release informa
 
 Our code file runs exclusive from our single python script `bbg_eco.py`. This script can be run via IDE or terminal, provided correct Python compiler location is provided from the header.  
 
-1. Open the `ECO_RELEASES.xslx`, go to the Bloomberg tab on Excel and click the Refresh Worksheets icon to update the Bloomberg formulas, populating the data fields. 
-2. After data has been updated, run the `bbg_eco.py` in a Python editor or via command line terminal to produce the cleaned series stored in the `Output` folder under the name `bloomberg_economic_releases.csv`. Note if using the command line be sure to modify the pathing within the script to point to the correct Python compiler.  
+1. 1.	Login into your Bloomberg Professional Service account, you will need it to retrieve data.
+2. Open the `ECO_RELEASES.xslx`, go to the Bloomberg tab on Excel and click the Refresh Worksheets icon to update the Bloomberg formulas, populating the data fields. 
+3. After data has been updated, run the `bbg_eco.py` in a Python editor or via command line terminal to produce the cleaned series stored in the `Output` folder under the name `bloomberg_economic_releases.csv`. Note if using the command line be sure to modify the pathing within the script to point to the correct Python compiler.  
 
 Refer to the table below for a sample output.
 
