@@ -4,7 +4,7 @@
 We provide a compact method for pulling historical U.S. economic release information from Bloomberg, updating the required excel spreadsheet and formatting the series as a continuous time series.
 
 ## 2	Software Dependencies
-* Python 3.6 system environment with at least 1 GB of memory and the following libraries installed (Pandas, Numpy)
+* Python 3.6 system environment with at least 1 GB of memory and the following libraries installed (i.e., Pandas, Numpy, Time)
 *	Bloomberg Professional Services for historical data
 
 ## 3	Code Structure
