@@ -50,6 +50,8 @@ for pg in range(len(res)):
     export_df['NAME'] = [df.iloc[0].iloc[1]] * n
     
     concat_list.append(export_df)
+    
+    print('\tSheet %d, extracted %s data' % (pg+1, df.iloc[0].iloc[1]))
 
 # concat all of the dataframes (all macroeconomic event)
 concat_pd = pd.concat(concat_list)
@@ -83,7 +85,7 @@ concat_pd = concat_pd.drop_duplicates(subset=['RELEASE_DATE', 'TICKER'], keep=Fa
 
 # %% Export Files locally to folder
 
-print('Cleaned Bloomberg Economic Data completed')
+print('\nCleaned Bloomberg Economic Data completed')
 print('\tTime Taken: %.2f minutes' % ((time.time() - start) / 60))
 concat_pd.to_csv(os.getcwd() + '/Output/bloomberg_economic_releases.csv', 
                  index=False)
