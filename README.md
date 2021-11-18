@@ -1,4 +1,4 @@
-### Bloomberg Economic Release Parser
+# Bloomberg Economic Release Parser
 
 ## 1	Introduction
 We provide a compact method for pulling historical U.S. economic release information from Bloomberg, updating the required excel spreadsheet and formatting the series as a continuous time series.
@@ -17,11 +17,11 @@ We provide a compact method for pulling historical U.S. economic release informa
 
 ## 4	Running Code
 
-Our code file runs exclusive from our single python script `bbg_eco.py`. This script can be run via IDE or terminal, provided correct Python compiler location is provided from the header.  
+Our code file runs exclusive from our single python script `main.py`. This script can be run via IDE or terminal, provided correct Python compiler location is provided from the header.  
 
-1. 1.	Login into your Bloomberg Professional Service account, you will need it to retrieve data.
+1. Login into your Bloomberg Professional Service account, you will need it to retrieve data.
 2. Open the `ECO_RELEASES.xslx`, go to the Bloomberg tab on Excel and click the Refresh Worksheets icon to update the Bloomberg formulas, populating the data fields. 
-3. After data has been updated, run the `bbg_eco.py` in a Python editor or via command line terminal to produce the cleaned series stored in the `Output` folder under the name `bloomberg_economic_releases.csv`. Note if using the command line be sure to modify the pathing within the script to point to the correct Python compiler.  
+3. After data has been updated, run the `main.py` in a Python editor or via command line terminal to produce the cleaned series stored in the `Output` folder under the name `bloomberg_economic_releases.csv`. Note if using the command line be sure to modify the pathing within the script to point to the correct Python compiler.  
 
 Refer to the table below for a sample output.
 
